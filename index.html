@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Arogya Mitra 2.0: educational rule-based symptom guidance with forward and backward chaining.">
+<title>Arogya Mitra 2.0</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="brand"><span class="logo" aria-hidden="true">✚</span><strong data-i18n="title">Arogya Mitra 2.0</strong></div>
+  <nav aria-label="Main">
+    <button class="tab" data-view="chat" aria-current="page" data-i18n="nav_chat">Assessment</button>
+    <button class="tab" data-view="history" data-i18n="nav_hist">History</button>
+    <button class="tab" data-view="learn" data-i18n="nav_learn">How it works</button>
+  </nav>
+  <div class="tools">
+    <select id="lang" aria-label="Language"><option value="en">English</option><option value="mr">मराठी</option><option value="hi">हिंदी</option></select>
+    <button id="theme" class="icon" aria-label="Dark / light mode">◐</button>
+  </div>
+</header>
+<main id="main">
+  <section class="hero"><h1 data-i18n="title">Arogya Mitra 2.0</h1><p data-i18n="tagline"></p><p class="note bilingual-note">Questions, answer choices, symptom names and recommendations are shown in English + मराठी. / प्रश्न, पर्याय, लक्षणे आणि सूचना English + मराठीमध्ये दाखवले जातील.</p></section>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <section id="view-chat" class="view">
+    <ol id="progress" class="progress" aria-label="Progress"></ol>
+    <div class="panel chatbox">
+      <h2 data-i18n="assistant">Arogya Mitra Assistant</h2>
+      <div id="chat" class="chat" aria-live="polite"></div>
+    </div>
+    <article id="results" class="panel results" hidden></article>
+  </section>
+
+  <section id="view-history" class="view" hidden>
+    <div class="panel"><h2 data-i18n="hist_h"></h2><p class="note" data-i18n="hist_note"></p><div id="hist-list"></div>
+      <div class="row"><button id="hist-export" class="btn ghost" data-i18n="hist_export"></button><button id="hist-clear" class="btn danger" data-i18n="hist_clear"></button></div></div>
+  </section>
+
+  <section id="view-learn" class="view" hidden>
+    <div class="panel"><h2 data-i18n="learn_h"></h2><h3 data-i18n="flow_h"></h3><ol id="flow" class="flow"></ol><div id="learn-body"></div></div>
+  </section>
+</main>
+<footer><p data-i18n="disc"></p><p data-i18n="foot"></p></footer>
+<script src="i18n.js"></script>
+<script src="engine.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
